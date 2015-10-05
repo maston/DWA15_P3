@@ -45,6 +45,7 @@
     </p>  
    
     <form method="POST" accept="/loremipsum/generate" id="loremipsum-form">
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
       <fieldset>
         <label for="txt-num-paragraph">Number of paragraphs you want:</label>
         <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25">

@@ -15,6 +15,9 @@ class LoremIpsum extends Controller
 
     // Responds to requests for POST /loremipsum/generate
     public function postGenerate() {
-        return 'Show the LoremIpsum results';
+        $generator = new Badcow\LoremIpsum\Generator();
+        $paragraphs = $generator->getParagraphs(5);
+        echo implode('<p>', $paragraphs);
+        // return view('loremipsum-test');
     }
 }
