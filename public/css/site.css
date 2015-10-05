@@ -1,0 +1,89 @@
+/* Navigation Section */
+nav a:link, nav a:visited
+nav a:hover, nav a:active {
+  text-decoration: none;
+}
+
+/* Horizontal Site Top Navigation */
+nav#site-nav {
+	border-bottom: 2px solid #004400; /* forrest green */
+	margin-top: .5em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+}
+
+nav#site-nav a:link, 
+nav#site-nav a:visited, 
+nav#site-nav a:active {
+  color: black;
+}
+
+nav#site-nav a:hover {
+  color: #A41034; /* Crimson */
+  padding-bottom: .25em;
+}
+
+nav#site-nav ul {
+	list-style-type: none;
+}
+
+/*nav#site-nav li:hover {
+   border-bottom: 1px solid #A41034;  
+}*/
+
+nav#site-nav ul li {
+	display: inline;
+	padding: 0 1em .5em 1em;
+}
+
+nav#site-nav li a.youarehere {
+  font-size:125%;
+  font-weight: bold;
+}
+
+.about {
+  background-color: #550000; /*maroon*/
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom:.5em;
+  padding-top:.5em;
+  border-radius: .5em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.about span {
+  font-weight: bold;
+}
+
+.about img {
+  float:left;
+  padding-right: .5em;
+}
+
+.instructions {
+  background-color: #FFE3AA; /*cream yellow*/
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom:.5em;
+  padding-top:.5em;
+  border-radius: .5em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  border: solid 1px #004400;
+/*  border-color: ;*/
+
+}
+.instructions span {
+  font-weight: bold;
+}
+
+.loremipsum-output-header {
+  visibility: hidden;
+}
+
+.loremipsum-output {
+  visibility: hidden;
+}
+
