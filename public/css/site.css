@@ -87,3 +87,10 @@ nav#site-nav li a.youarehere {
   visibility: hidden;
 }
 
+.randomuser-output-header {
+  visibility: hidden;
+}
+
+.randomuser-output {
+  visibility: hidden;
+}

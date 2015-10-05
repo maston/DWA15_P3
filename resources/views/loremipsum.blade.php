@@ -77,7 +77,7 @@ Duis lacus curabitur dui justo blandit suspendisse faucibus, habitasse lectus ut
 <!-- end form section -->
 
 
-
+</div>
 <!-- end bootstrap container -->
 </body>
 </html>
