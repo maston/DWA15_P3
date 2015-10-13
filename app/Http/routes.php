@@ -12,7 +12,7 @@ use Badcow\LoremIpsum\Generator;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 // routes for Lorem Ipsum Generator

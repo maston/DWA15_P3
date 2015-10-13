@@ -17,8 +17,11 @@ class LoremIpsum extends Controller
     // Responds to requests for POST /loremipsum/generate
     public function postGenerate() {
         $generator = new Generator();
-        $paragraphs = $generator->getParagraphs(5);
-        echo implode('<p>', $paragraphs);
-        // return view('loremipsum-test');
+        $num_paragraph = $_POST['num_paragraph'];
+        $paragraphs = $generator->getParagraphs($num_paragraph);
+        // echo implode('<p>', $paragraphs);
+        return view('loremipsum.results')
+            ->with('paragraphs', $paragraphs)
+            ->with('num_paragraph', $num_paragraph);
     }
 }

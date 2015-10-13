@@ -11,7 +11,7 @@
     Just enter the number of paragraphs you would like and click 'Generate.'
     </p>  
    
-    <form method="POST" accept="/loremipsum/generate" id="loremipsum-form">
+    <form method="POST" action="/loremipsum/generate" id="loremipsum-form">
     <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
       <fieldset>
         <label for="txt-num-paragraph">Number of paragraphs you want:</label>
