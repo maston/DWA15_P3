@@ -79,13 +79,14 @@ nav#site-nav li a.youarehere {
   font-weight: bold;
 }
 
-.loremipsum-output-header {
+/*.loremipsum-output-header {
   visibility: hidden;
-}
+}*/
 
-.loremipsum-output {
-  visibility: hidden;
-}
+/*.loremipsum-output {
+  float:left;
+  clear: both;
+}*/
 
 .randomuser-output-header {
   visibility: hidden;

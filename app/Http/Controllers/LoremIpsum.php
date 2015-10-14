@@ -20,7 +20,7 @@ class LoremIpsum extends Controller
         $num_paragraph = $_POST['num_paragraph'];
         $paragraphs = $generator->getParagraphs($num_paragraph);
         // echo implode('<p>', $paragraphs);
-        return view('loremipsum.results')
+        return view('loremipsum.generate')
             ->with('paragraphs', $paragraphs)
             ->with('num_paragraph', $num_paragraph);
     }

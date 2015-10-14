@@ -27,5 +27,5 @@ Route::post('/randomuser/generate', 'RandomUser@postGenerate');
 Route::get('/practice', function () {
     $generator = new Generator();
 	$paragraphs = $generator->getParagraphs(5);
-	return  implode('<p>', $paragraphs);
+	return  implode($paragraphs, '<p>');
 });
