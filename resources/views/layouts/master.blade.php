@@ -35,12 +35,12 @@
     </header>
     <!--  end header section  -->
 
-    <section>
+    <section class="row">
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
 
-    <footer>
+    <footer class="row">
         &copy; {{ date('Y') }}
     </footer>
 
@@ -48,6 +48,6 @@
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')
-
+    </div>
 </body>
 </html>
