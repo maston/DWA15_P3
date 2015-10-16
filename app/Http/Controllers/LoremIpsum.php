@@ -15,9 +15,9 @@ class LoremIpsum extends Controller
     }
 
     // Responds to requests for POST /loremipsum/generate
-    public function postGenerate() {
-        $generator = new Generator();
-        $num_paragraph = $_POST['num_paragraph'];
+    public function postGenerate(Request $request) {
+        $generator = new Generator(); 
+        $num_paragraph = $request['num_paragraph'];
         $paragraphs = $generator->getParagraphs($num_paragraph);
         // echo implode('<p>', $paragraphs);
         return view('loremipsum.generate')

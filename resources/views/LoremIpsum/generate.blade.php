@@ -1,5 +1,16 @@
 @extends('layouts.master')
 
+@section('navbar')
+    <!-- begin site navigation : bootstrap medium columns : 12 wide -->
+      <nav id="site-nav" class="col-md-12">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/loremipsum/generate" class="youarehere">Lorem Ipsum Generator</a></li>
+          <li><a href="/randomuser/generate">Random User Generator</a></li>
+        </ul>
+      </nav>
+    <!-- end site navigation -->
+@stop
 
 @section('content')
 <!-- begin form section -->
@@ -12,11 +23,15 @@
     </p>  
    
     <form method="POST" action="/loremipsum/generate" id="loremipsum-form">
-    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <fieldset>
         <label for="txt-num-paragraph">Number of paragraphs you want:</label>
-        <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25">
-        <input type="submit" value="Generate" id="param-submit-button">
+        @if(isset($num_paragraph))
+          <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25" value="{{ $num_paragraph }}">
+        @else
+          <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25">
+        @endif
+        <input type="submit" value="Generate" id="param-submit-button" class="button">
       </fieldset>
     </form>
   </div>
