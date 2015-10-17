@@ -50,7 +50,7 @@
 <!-- end form section -->
 
     @if(isset($paragraphs))
-      <div class="col-md-6 loremipsum-output">
+      <div class="col-md-12 loremipsum-output">
       <h4>Here is your generated text:</h4>
         {{ implode("<br>",$paragraphs) }}
       </div>

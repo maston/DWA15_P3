@@ -17,22 +17,31 @@ class RandomUser extends Controller
 
     // Responds to requests for POST /randomuser/generate
     public function postGenerate(Request $request) {
-        $test = self::generateFakeList($request);
-        echo $test;
+        $num_to_generate = $request->input('num_users');
+        $add_birthday = $request->input('add_birthday');
+        $add_profile = $request->input('add_profile');
+        $listFakePeople = self::generateFakeList($num_to_generate);
+        // echo var_dump($listFakePeople);
+        return View('RandomUser.generate')
+            ->with('fakePeople', $listFakePeople)
+            ->with('num_to_generate', $num_to_generate)
+            ->with('add_birthday', $add_birthday)
+            ->with('add_profile', $add_profile);
     }
 
-    private function generateFakeList(Request $request) {
-        $num_to_generate = $request->input('num_users');
-        $test = '';
+    private function generateFakeList($num_to_generate) {
+        // $num_to_generate = $request->input('num_users');
+        $listFakePeople = array();
 
         for ($i=0; $i<$num_to_generate; $i++) {
-            $test = $test.'generated '.$i.'<br>';
+            $person = self::generateFakePerson();
+            array_push($listFakePeople,$person);
         }
 
-        return $test;
+        return $listFakePeople;
     }
 
-    private function generateFakePerson(Request $request) {
+    private function generateFakePerson() {
         $faker = Factory::create();
 
         $personData = array();
