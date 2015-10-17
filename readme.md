@@ -16,9 +16,9 @@ No login required.
 ## Outside Code & Resources
 
 * Packages included in project
-.* Lorem Ipsum Generator: [badcow/lorem-ipsum](https://packagist.org/packages/badcow/lorem-ipsum)
-.* Fake Profile Generator: [fzaninotto/faker](https://packagist.org/packages/fzaninotto/faker)
+..* Lorem Ipsum Generator: [badcow/lorem-ipsum](https://packagist.org/packages/badcow/lorem-ipsum)
+..* Fake Profile Generator: [fzaninotto/faker](https://packagist.org/packages/fzaninotto/faker)
 
 * HTML/css/images
-.* Bootstrap: http://getbootstrap.com/
-.* ClipArt Owl Image - http://www.clipartpanda.com/categories/free-clip-art-animals-owl
+..* Bootstrap: http://getbootstrap.com/
+..* ClipArt Owl Image - http://www.clipartpanda.com/categories/free-clip-art-animals-owl
