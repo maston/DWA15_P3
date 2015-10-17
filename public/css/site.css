@@ -1,4 +1,7 @@
+/* Sarah Maston - CSCIE-15 - Dynamic Web Applications - Project 3 - CSS */
 
+/* Sticky Footer
+   src = /* http://mystrd.at/modern-clean-css-sticky-footer */
 html {
     position: relative;
     min-height: 100%;
@@ -18,14 +21,14 @@ footer {
     text-align:center;
     padding:5px;
 }
+/* end Sticky Footer */
 
-/* Navigation Section */
+/* Horizontal Site Top Navigation */
 nav a:link, nav a:visited
 nav a:hover, nav a:active {
   text-decoration: none;
 }
 
-/* Horizontal Site Top Navigation */
 nav#site-nav {
 	border-bottom: 2px solid #004400; /* forrest green */
 	margin-top: .5em;
@@ -57,28 +60,9 @@ nav#site-nav li a.youarehere {
   font-size:125%;
   font-weight: bold;
 }
+/* end Horizontal Site Top Navigation */
 
-.about {
-  background-color: #550000; /*maroon*/
-  color: white;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom:.5em;
-  padding-top:.5em;
-  border-radius: .5em;
-  margin-bottom: 2em;
-  margin-top: 1em;
-}
-
-.about span {
-  font-weight: bold;
-}
-
-.about img {
-  float:left;
-  padding-right: .5em;
-}
-
+/* start site-wide styles */
 .instructions {
   background-color: #FFE3AA; /*cream yellow*/
   padding-left: 2em;
@@ -99,17 +83,53 @@ nav#site-nav li a.youarehere {
   color:red;
 }
 
-input.input-num-parameter {
+.input-num-parameter {
   margin-left: .5em;
   margin-right: .5em;
 }
+/* end site-wide styles */
 
-form#loremipsum-form {
+/* start home page styles */
+.not-helpful {
+  float:left;
+  padding-right:2em;
+}
+/* end home page styles */
+
+/* start lorem ipsum page styles */
+.loremipsum-about {
+  background-color: #550000; /*maroon*/
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom:.5em;
+  padding-top:.5em;
+  border-radius: .5em;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.loremipsum-about span {
+  font-weight: bold;
+}
+
+.loremipsum-about img {
+  float:left;
+  padding-right: .5em;
+}
+
+#loremipsum-form {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-p#random-user-optional-param {
+.loremipsum-output {
+  border-radius: .5em;
+}
+/* end lorem ipsum page styles */
+
+/* start random user page styles */
+#random-user-optional-param {
   margin-left: 2em;
   margin-right: 2em;
   background-color: #DBDBDB; /*very light gray*/
@@ -126,3 +146,4 @@ p#random-user-optional-param {
 .random-user-optional-param-detail {
   padding-left:1em;
 }
+/* end random user page styles */

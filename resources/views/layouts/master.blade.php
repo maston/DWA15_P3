@@ -1,10 +1,13 @@
 <!doctype html>
 <html>
 <head>
+    <!-- begin title -->
     <title>
         {{-- Yield the title if it exists, otherwise default to 'Developer's Best Friend' --}}
         @yield('title','Developer\'s Best Friend')
     </title>
+    <!-- end title -->
+    
     <meta charset="utf-8">
     <meta name="author" content="Sarah Maston">
     <meta name="description" content="CSCI E-15 - Dynamic Web Applications - Project Three - Developer's Best Friend">
@@ -28,20 +31,23 @@
       @yield('navbar')
     </header>
     <!--  end header section  -->
-
+    
+    <!--  begin content section  -->
     <section class="row">
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
+    <!--  begin content section  -->
 
+    <!--  begin footer section  -->
     <footer class="row">
-        <a src="https://github.com/maston/DWA15_P3"> Code available on Github </a>
+        <a href="https://github.com/maston/DWA15_P3"> Code available on Github </a>
     </footer>
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <!--  end footer section  -->
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')
     </div>
+    <!-- end bootstrap container -->
 </body>
 </html>

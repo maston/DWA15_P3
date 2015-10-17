@@ -18,13 +18,14 @@ class LoremIpsum extends Controller
     public function postGenerate(Request $request) {
         // Validate the request data
         $this->validate($request, [
-            'num_paragraph' => 'required',
+            'num_paragraph' => 'required|integer|min:1|max:25',
         ]);
 
         $generator = new Generator(); 
         $num_paragraph = $request['num_paragraph'];
         $paragraphs = $generator->getParagraphs($num_paragraph);
-        // echo implode('<p>', $paragraphs);
+        
+        // return generated paragraphs to the view
         return view('loremipsum.generate')
             ->with('paragraphs', $paragraphs)
             ->with('num_paragraph', $num_paragraph);

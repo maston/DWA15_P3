@@ -19,14 +19,15 @@ class RandomUser extends Controller
     public function postGenerate(Request $request) {
         // Validate the request data
         $this->validate($request, [
-            'num_users' => 'required',
+            'num_users' => 'required|integer|min:1|max:25',
         ]);
 
         $num_to_generate = $request->input('num_users');
         $add_birthday = $request->input('add_birthday');
         $add_profile = $request->input('add_profile');
         $listFakePeople = self::generateFakeList($num_to_generate);
-        // echo var_dump($listFakePeople);
+
+        // return fake users to the view
         return View('RandomUser.generate')
             ->with('fakePeople', $listFakePeople)
             ->with('num_to_generate', $num_to_generate)
@@ -34,6 +35,12 @@ class RandomUser extends Controller
             ->with('add_profile', $add_profile);
     }
 
+// ****************************
+// function: generateFakeList
+// param: $num_to_generate - number of fake profiles that will be generated
+// summary: creates an array of fake user profiles calling the function generateFakePerson()
+// returns: the array of profiles
+// ****************************
     private function generateFakeList($num_to_generate) {
         // $num_to_generate = $request->input('num_users');
         $listFakePeople = array();
@@ -46,6 +53,12 @@ class RandomUser extends Controller
         return $listFakePeople;
     }
 
+// ****************************
+// function: generateFakePerson
+// param: none
+// summary: Creates a fake user profile based on the Faker package
+// returns: a random fake person. possibly from my past.
+// ****************************
     private function generateFakePerson() {
         $faker = Factory::create();
 
@@ -54,12 +67,9 @@ class RandomUser extends Controller
             $personData['dob'] = $faker->dateTimeBetween($startDate='-55 years', $endDate='now')->format('Y-m-d');
             $personData['phone'] = $faker->phoneNumber;
             $personData['profile'] = $faker->paragraph;    
-            // $personData['street'] = $street;
             $personData['city'] = $faker->city;
             $personData['state'] = $faker->state;
             $personData['zip'] = $faker->postcode;
-            $personData['lat'] = $faker->latitude;
-            $personData['long'] = $faker->longitude;
 
         return $personData;
     }
