@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use DevBestFriend\Http\Requests;
 use DevBestFriend\Http\Controllers\Controller;
 
+use Faker\Factory;
+
 class RandomUser extends Controller
 {
      // Responds to requests for GET /randomuser/generate
@@ -15,6 +17,8 @@ class RandomUser extends Controller
 
     // Responds to requests for POST /randomuser/generate
     public function postGenerate(Request $request) {
-        return 'Show the Random User results';
+    	$faker = Factory::create();
+    	echo $faker->name; 
+        // return 'Show the Random User results';
     }
 }
