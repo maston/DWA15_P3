@@ -1,5 +1,5 @@
 <?php
-use Badcow\LoremIpsum\Generator;
+// use Badcow\LoremIpsum\Generator;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,6 +10,7 @@ use Badcow\LoremIpsum\Generator;
 | and give it the controller to call when that URI is requested.
 |
 */
+use Faker\Factory;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,7 +26,32 @@ Route::post('/randomuser/generate', 'RandomUser@postGenerate');
 
 
 Route::get('/practice', function () {
-    $generator = new Generator();
-	$paragraphs = $generator->getParagraphs(5);
-	return  implode($paragraphs, '<p>');
+    	$faker = Factory::create();
+        // $name = $faker->name;
+        // $dob = $faker->dateTimeBetween($startDate='-55 years', $endDate='now')->format('Y-m-d');
+        // $phone = $faker->phoneNumber;
+        // $profile = $faker->paragraph;
+        // $street = $faker->streetAddress;
+        // $city = $faker->city;
+        // $state = $faker->state;
+        // $zip = $faker->postcode;
+        // $lat = $faker->latitude;
+        // $long = $faker->longitude;
+
+
+        $personData = array();
+	    	$personData['name'] = $faker->name;
+	        $personData['dob'] = $faker->dateTimeBetween($startDate='-55 years', $endDate='now')->format('Y-m-d');
+	    	$personData['phone'] = $faker->phoneNumber;
+	    	$personData['profile'] = $faker->paragraph;    
+	    	// $personData['street'] = $street;
+	    	$personData['city'] = $faker->city;
+	    	$personData['state'] = $faker->state;
+	    	$personData['zip'] = $faker->postcode;
+	    	$personData['lat'] = $faker->latitude;
+	    	$personData['long'] = $faker->longitude;
+
+	    echo var_dump($personData);
+
+
 });
