@@ -10,7 +10,7 @@
     <meta name="description" content="CSCI E-15 - Dynamic Web Applications - Project Three - Developer's Best Friend">
     <!-- stylesheets: bootstrap, theme and site -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/united/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lavish-bootstrap.css">
     <link rel="stylesheet" href="../css/site.css">
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
@@ -35,7 +35,7 @@
     </section>
 
     <footer class="row">
-        &copy; {{ date('Y') }}
+        <a src="https://github.com/maston/DWA15_P3"> Code available on Github </a>
     </footer>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->

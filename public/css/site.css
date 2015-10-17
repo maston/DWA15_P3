@@ -1,22 +1,23 @@
+
 html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     margin: 0 0 100px; /* bottom = footer height */
 }
+
 footer {
     position: absolute;
     left:0;
     bottom:0;
     height:30px;
     width:100%;
-    background-color:#ccc;
+    background-color:#004400;
     text-align:center;
     padding:5px;
 }
-}
-
 
 /* Navigation Section */
 nav a:link, nav a:visited
@@ -46,10 +47,6 @@ nav#site-nav a:hover {
 nav#site-nav ul {
 	list-style-type: none;
 }
-
-/*nav#site-nav li:hover {
-   border-bottom: 1px solid #A41034;  
-}*/
 
 nav#site-nav ul li {
 	display: inline;
@@ -92,30 +89,40 @@ nav#site-nav li a.youarehere {
   margin-bottom: 2em;
   margin-top: 1em;
   border: solid 1px #004400;
-/*  border-color: ;*/
-
 }
+
 .instructions span {
   font-weight: bold;
 }
 
-#loremipsum-form {
+.error-list {
+  color:red;
+}
+
+input.input-num-parameter {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+form#loremipsum-form {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-/*.loremipsum-output-header {
-  visibility: hidden;
-}*/
 
-/*.loremipsum-output {
-  float:left;
-  clear: both;
-}*/
-
-.randomuser-output-header {
-  visibility: hidden;
+p#random-user-optional-param {
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: #DBDBDB; /*very light gray*/
+  border-radius: .5em;
+  padding: .25em;
+  margin-top: .25em;
+  border: solid 1px #004400;
 }
 
-.randomuser-output {
-  visibility: hidden;
+#random-user-optional-param-title {
+  font-style: italic;
+}
+
+.random-user-optional-param-detail {
+  padding-left:1em;
 }

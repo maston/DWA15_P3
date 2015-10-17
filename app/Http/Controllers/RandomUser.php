@@ -17,6 +17,11 @@ class RandomUser extends Controller
 
     // Responds to requests for POST /randomuser/generate
     public function postGenerate(Request $request) {
+        // Validate the request data
+        $this->validate($request, [
+            'num_users' => 'required',
+        ]);
+
         $num_to_generate = $request->input('num_users');
         $add_birthday = $request->input('add_birthday');
         $add_profile = $request->input('add_profile');

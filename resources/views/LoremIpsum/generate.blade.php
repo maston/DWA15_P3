@@ -21,17 +21,25 @@
     This tool will generate paragraphs of Lorem Ipsum text for you for all your fancy development needs.<br>
     Just enter the number of paragraphs you would like and click 'Generate.'
     </p>  
-   
+
+    @if(count($errors) > 0)
+      <ul class="error-list">
+        @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+    @endif  
+
     <form method="POST" action="/loremipsum/generate" id="loremipsum-form">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <fieldset>
-        <label for="txt-num-paragraph">Number of paragraphs you want:</label>
+        <label for="txt-num-paragraph">Enter number of paragraphs: (1-25)</label>
         @if(isset($num_paragraph))
-          <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25" value="{{ $num_paragraph }}">
+          <input type="number" name="num_paragraph" id="txt-num-paragraph" class="input-num-parameter" min="1" max="25" value="{{ $num_paragraph }}">
         @else
-          <input type="number" name="num_paragraph" id="txt-num-paragraph" min="1" max="25">
+          <input type="number" name="num_paragraph" id="txt-num-paragraph" class="input-num-parameter" min="1" max="25">
         @endif
-        <input type="submit" value="Generate" id="param-submit-button" class="button">
+        <input type="submit" value="Generate" id="param-submit-button" class="btn btn-primary btn-sm">
       </fieldset>
     </form>
   </div>
