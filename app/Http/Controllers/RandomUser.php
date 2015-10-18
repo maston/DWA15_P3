@@ -12,7 +12,7 @@ class RandomUser extends Controller
 {
      // Responds to requests for GET /randomuser/generate
     public function getGenerate() {
-        return view('randomuser.generate');
+        return view('RandomUser.generate');
     }
 
     // Responds to requests for POST /randomuser/generate
