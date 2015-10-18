@@ -33,7 +33,7 @@
 	 <!-- end error trapping -->
 	
 	 <!-- begin form -->
-	    <form method="POST" accept="/randomuser/generate" id="randomgenerator-form" class="col-md-12">
+	    <form method="POST" action="/randomuser/generate" id="randomgenerator-form" class="col-md-12">
 	 	<fieldset>   
 		    <!-- generate csrf token -->
 		    <input type="hidden" name="_token" value="{{ csrf_token() }}">  
