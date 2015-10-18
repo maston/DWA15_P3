@@ -10,9 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-// use Faker\Factory;
-use Ivory\GoogleMap\Map;
-use Ivory\GoogleMap\Helper\MapHelper;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,24 +23,3 @@ Route::post('/loremipsum/generate', 'LoremIpsum@postGenerate');
 Route::get('/randomuser/generate', 'RandomUser@getGenerate');
 Route::post('/randomuser/generate', 'RandomUser@postGenerate');
 
-
-Route::get('/practice', function () {
-
-
-
-$map = new Map();
-
-// Disable the auto zoom flag
-$map->setAutoZoom(false);
-
-// Sets the center
-$map->setCenter(0, 0, true);
-
-// Sets the zoom
-$map->setMapOption('zoom', 3);
-
-$mapHelper = new MapHelper();
-
-echo $mapHelper->renderHtmlContainer($map);
-
-});

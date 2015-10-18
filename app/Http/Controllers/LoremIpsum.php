@@ -5,6 +5,7 @@ namespace DevBestFriend\Http\Controllers;
 use Illuminate\Http\Request;
 use DevBestFriend\Http\Requests;
 use DevBestFriend\Http\Controllers\Controller;
+
 use Badcow\LoremIpsum\Generator;
 
 class LoremIpsum extends Controller
@@ -26,7 +27,7 @@ class LoremIpsum extends Controller
         $paragraphs = $generator->getParagraphs($num_paragraph);
         
         // return generated paragraphs to the view
-        return view('loremipsum.generate')
+        return view('LoremIpsum.generate')
             ->with('paragraphs', $paragraphs)
             ->with('num_paragraph', $num_paragraph);
     }
